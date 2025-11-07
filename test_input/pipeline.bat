@@ -10,7 +10,7 @@ set TEMP_DIR=mfa_temp
 set CORPUS_DIR=.
 set BASE_DICT_NAME=english_us_arpa
 set ACOUSTIC_MODEL=english_us_arpa
-set BASE_DICT_PATH=C:\Users\vane\Documents\MFA\pretrained_models\dictionary\%BASE_DICT_NAME%.dict
+set BASE_DICT_PATH=%USERPROFILE%\Documents\MFA\pretrained_models\dictionary\%BASE_DICT_NAME%.dict
 
 :: Update OOV_FILE to point to the correct, nested path
 set OOV_FILE=%TEMP_DIR%\%CORPUS_NAME%\oovs_found_%BASE_DICT_NAME%.txt
@@ -50,6 +50,12 @@ mfa g2p %OOV_FILE% %G2P_MODEL% %NEW_PRONS% --clean --temporary_directory %TEMP_D
 
 echo.
 echo [4/6] Combining dictionaries...
+:: Check if the base dictionary exists before trying to combine
+if not exist "%BASE_DICT_PATH%" (
+    echo ERROR: Base dictionary not found at "%BASE_DICT_PATH%"
+    echo Please ensure MFA models were downloaded to the default location.
+    goto :eof
+)
 type "%BASE_DICT_PATH%" %NEW_PRONS% > %FINAL_DICT%
 echo New dictionary '%FINAL_DICT%' created.
 
