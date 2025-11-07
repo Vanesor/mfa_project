@@ -1,0 +1,14 @@
+dukakis	D AH0 K AA1 K IH0 S
+dukakis	D UW0 K AA1 K IH0 S
+dukakis	D UW1 K AA1 K IH0 S
+politicize	P AH0 L IH1 T AH0 S AY2 Z
+politicize	P AH0 L IH1 T IH0 S AY2 Z
+maffy	M AE1 F IY0
+wbur	B ER0
+wbur	V AH0 B ER0
+wbur	V B ER0
+wbur	W AH0 B ER0
+wbur	W AO1 B ER0
+wbur	W B ER0
+melnicove	M EH1 L N IH0 K OW2 V
+melnicove	M EH1 L N IY1 K OW2 V

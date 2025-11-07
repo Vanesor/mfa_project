@@ -1,0 +1,5 @@
+*.zip
+*.wav
+F*.txt
+I*.txt
+mfa_temp/
